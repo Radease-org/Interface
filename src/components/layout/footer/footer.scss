@@ -1,0 +1,31 @@
+footer {
+  @apply bg-secondary-900 text-white px-6 lg:px-32 pt-8 pb-6 w-full;
+  .content {
+    @apply flex flex-col items-start w-full lg:w-[85%] justify-between lg:flex-row;
+    .logo {
+      @apply w-28 h-11;
+    }
+    .footer-section {
+      @apply w-60 hidden lg:block;
+
+      .header {
+        @apply text-[14px] tracking-[0.15px] font-black;
+      }
+      p {
+        @apply text-[12px] font-bold my-4;
+      }
+    }
+  }
+  .last-section {
+    @apply flex flex-col lg:flex-row gap-4 justify-between items-start lg:items-center border-t-2 border-secondary-700 mt-6 py-4;
+    a {
+      @apply text-[12px] font-bold pr-2 lg:pr-8;
+    }
+    .socials {
+      @apply flex flex-row gap-4;
+      .social-item {
+        @apply rounded-full border-2 p-1;
+      }
+    }
+  }
+}

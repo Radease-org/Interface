@@ -1,0 +1,18 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Satoshi", sans-serif;
+}
+
+.container {
+  @apply mx-auto xs:max-w-full sm:max-w-[620px] md:max-w-[740px] lg:max-w-[990px] xl:max-w-[1230px] 2xl:max-w-[1476px] 3xl:max-w-[2480px] 4xl:max-w-[4900px];
+}
+
+.text-primary-gradient {
+  background: -webkit-linear-gradient(57deg, #57e9a9 0.25%, #40a8d0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
