@@ -33,42 +33,42 @@ const Benefits = () => {
       icon: "/icons/always-stocked.svg",
       title: "Always stocked",
       description:
-        "Benefit from the great discounts we achieve through bulk-buying and our relationship with world's top manufacturers."
+        "Never run out of critical life-saving supplies. Stay informed about your stock usage in real time with our intelligent inventory management system."
     },
     {
       id: 1,
       icon: "/icons/access-to-supplies.svg",
       title: "Access to scarce supplies",
       description:
-        "A central hub means no more administrative nightmare of dealing with numerous suppliers or visiting the market"
+        "Say goodbye to supplier hassles and market trips. Everything's easier with our one-stop hub."
     },
     {
       id: 2,
       icon: "/icons/purchase-with-ease.svg",
-      title: "Purchase with ease",
+      title: "Seamless purchasing",
       description:
-        "A central hub means no more administrative nightmare of dealing with numerous suppliers or visiting the market"
+        "Our processes are user-centric and simple. We would also be there with you and for you every step of the way."
     },
     {
       id: 3,
       icon: "/icons/save-on-spend.svg",
-      title: "Save on spend",
+      title: "Maximize Savings",
       description:
-        "Benefit from the great discounts we achieve through bulk-buying and our relationship with world's top manufacturers."
+        "Unlock remarkable savings through our strategic bulk purchases and exclusive partnerships with global industry leaders."
     },
     {
       id: 4,
-      icon: "/icons/purchase-with-ease.svg",
-      title: "Purchase with ease",
+      icon: "/icons/lightning.svg",
+      title: "Lightning speed",
       description:
-        "A central hub means no more administrative nightmare of dealing with numerous suppliers or visiting the market"
+        "Our turnaround time is unmatched. Qualified orders enjoy same day delivery. Our support team also responds in minutes!"
     },
     {
       id: 5,
       icon: "/icons/buy-with-trust.svg",
       title: "Buy with trust",
       description:
-        "A central hub means no more administrative nightmare of dealing with numerous suppliers or visiting the market"
+        "With us, there are no stories, you get what you need when you need it. Our quality control checks also ensure you get no counterfeit items"
     }
   ];
   return (
@@ -101,9 +101,9 @@ const Benefits = () => {
         })}
       </div>
       {/* second section */}
-      <section className="mt-24 md:my-32">
+      <section className="mt-24 md:my-32" id="why-radease">
         <h2 className="text-lg md:text-4xl text-center font-black">
-          Get medical supplies in a smart way
+          Get your supplies hassle free
         </h2>
         <div className="container  px-4 mt-24 md:mt-32">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 md:gap-y-14">
@@ -128,23 +128,23 @@ const Benefits = () => {
       </section>
 
       {/* third section */}
-      <section className="mt-24 md:my-32">
+      <section className="mt-24 md:my-32" id="our-promise">
         <div className="container px-4">
           <div className="flex gap-28 flex-wrap items-center justify-center">
             <div className="max-w-[590px]">
               <span className="text-[#059669] bg-[#ECFDF5] font-bold text-sm p-1.5">
-                The digital way
+                Our Promise
               </span>
-              <h2 className="text-4xl font-black mb-6 mt-3">
-                Get your supplies hassle free
+              <h2 className="text-4xl font-black mb-6 mt-3 max-w-[530px]">
+                If it's not easy, it is not Radease!
               </h2>
               <p className="font-medium">
-                Benefit from the great discounts we achieve through bulk-buying
-                and our relationship with world's top manufacturers.
+                We're a mission-driven organisation and our mission is simple:
+                Make it easy for you to grow and scale your healthcare business!
               </p>
             </div>
             <div className="img-container">
-              <img src="/images/hassle-free.svg" alt="" />
+              <img src="/images/our-promise.svg" alt="" />
             </div>
           </div>
         </div>

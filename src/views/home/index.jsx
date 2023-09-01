@@ -7,25 +7,33 @@ import Newsletter from "./components/Newsletter";
 
 import "./style.scss";
 import GetStartedModal from "./components/GetStartedModal";
+import HashElement from "../../components/HashElement";
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [email, setEmail] = useState("");
 
-  const handleOpenModal = () => {
+  const handleOpenModal = email => {
     setOpenModal(true);
+    setEmail(email);
   };
   const handleCloseModal = () => {
     setOpenModal(false);
   };
   return (
     <>
-      <Header />
-      <Hero handleOpenModal={handleOpenModal} />
+      <Header openModal={handleOpenModal} />
+      <Hero openModal={handleOpenModal} />
       <Benefits />
-      <Newsletter />
+      <Newsletter openModal={handleOpenModal} />
       <Footer />
 
-      <GetStartedModal open={openModal} handleClose={handleCloseModal} />
+      <GetStartedModal
+        open={openModal}
+        handleClose={handleCloseModal}
+        email={email}
+      />
+      <HashElement />
     </>
   );
 };

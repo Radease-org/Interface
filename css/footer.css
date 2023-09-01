@@ -1,0 +1,30 @@
+footer {
+  @apply bg-secondary-900 text-white px-6 lg:px-32 pt-8 pb-6 w-full;
+}
+footer .content {
+  @apply flex flex-col items-start w-full lg:w-[85%] justify-between lg:flex-row;
+}
+footer .content .logo {
+  @apply w-28 h-11;
+}
+footer .content .footer-section {
+  @apply w-60 hidden lg:block;
+}
+footer .content .footer-section .header {
+  @apply text-[14px] tracking-[0.15px] font-black;
+}
+footer .content .footer-section p {
+  @apply text-[12px] font-bold my-4;
+}
+footer .last-section {
+  @apply flex flex-col lg:flex-row gap-4 justify-between items-start lg:items-center border-t-2 border-secondary-700 mt-6 py-4;
+}
+footer .last-section a {
+  @apply text-[12px] font-bold pr-2 lg:pr-8;
+}
+footer .last-section .socials {
+  @apply flex flex-row gap-4;
+}
+footer .last-section .socials .social-item {
+  @apply rounded-full border-2 p-1;
+}
