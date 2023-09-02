@@ -86,7 +86,7 @@ const Hero = ({ openModal }) => {
       </section>
       {showBackToTop && (
         <button
-          className="fixed bottom-10 right-10 p-3 rounded-full back-to-top text-[#061541]"
+          className="fixed bottom-8 right-8 p-3 rounded-full back-to-top text-[#061541] z-10"
           onClick={onScrollToTop}
         >
           <HiOutlineChevronDoubleUp />

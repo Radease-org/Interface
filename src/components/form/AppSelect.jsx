@@ -1,42 +1,34 @@
 import React from "react";
-import { TextField, MenuItem } from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-const AppSelect = (props) => {
-  const { label, options, name } = props;
+const AppSelect = props => {
+  const { label, options, name, onChange } = props;
   return (
-    <TextField
-      id={name}
-      select
-      label={label}
-      defaultValue=""
-      className="w-full"
-      sx={{
-        "& .MuiOutlinedInput-root": {
-          fontSize: 14,
-          borderRadius: "4px",
-          color: "#475569",
-        },
-        "& .MuiFormLabel-root": {
-          color: "#475569",
-        },
-        "& .MuiOutlinedInput-notchedOutline": {
-          border: "1.2px solid #CBD5E1",
-        },
-        "& .Mui-focused": {
-          "& .MuiOutlinedInput-notchedOutline": {
-            border: "1.2px solid #CBD5E1",
-          },
-        },
-      }}
-      SelectProps={{ IconComponent: MdKeyboardArrowDown }}
-    >
-      {options.map((option) => (
-        <MenuItem key={option.value} value={option.value}>
-          {option.label}
-        </MenuItem>
-      ))}
-    </TextField>
+    <FormControl className="w-full">
+      <InputLabel>{label}</InputLabel>
+      <Select
+        id={name}
+        name={name}
+        label={label}
+        defaultValue=""
+        IconComponent={MdKeyboardArrowDown}
+        onChange={onChange}
+        MenuProps={{
+          sx: {
+            "& .MuiPaper-root": {
+              maxHeight: 200
+            }
+          }
+        }}
+      >
+        {options.map(option => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
   );
 };
 

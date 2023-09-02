@@ -1,25 +1,19 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Modal, Box, Grid, Zoom, useScrollTrigger } from "@mui/material";
+import {
+  Modal,
+  Box,
+  Grid,
+  Zoom,
+  useScrollTrigger,
+  InputAdornment
+} from "@mui/material";
 import { MdCancel } from "react-icons/md";
 import AppInput from "../../../components/form/AppInput";
 import AppSelect from "../../../components/form/AppSelect";
 import ButtonLoader from "../../../components/loaders/ButtonLoader";
 import { toast } from "react-toastify";
+import { FACILITY_TYPE, NIGERIAN_STATES } from "../../../db";
 
-const currencies = [
-  {
-    value: "hospital",
-    label: "Hospital"
-  },
-  {
-    value: "laboratory",
-    label: "Laboratory"
-  },
-  {
-    value: "clinic",
-    label: "Clinic"
-  }
-];
 const GetStartedModal = props => {
   const { open, handleClose, email } = props;
 
@@ -34,7 +28,8 @@ const GetStartedModal = props => {
       data?.last_name &&
       data?.email &&
       data?.phone &&
-      data?.company_name
+      data?.company_name &&
+      data?.health_facility
     );
   }, [data]);
 
@@ -86,7 +81,7 @@ const GetStartedModal = props => {
           <button onClick={handleClose} className="absolute -right-2 -top-2">
             <MdCancel className="text-gray-500 text-[20px]" />
           </button>
-          <h3 className="text-primary-gradient text-[20px] lg:text-[24px] font-bold mb-8">
+          <h3 className="text-[#0F172A] text-[20px] lg:text-[24px] font-bold mb-8">
             Have a feel of what Radease is
           </h3>
           <form onSubmit={handleSubmit}>
@@ -120,7 +115,17 @@ const GetStartedModal = props => {
                   label="Business Phone number"
                   onChange={handleTextChange}
                   name="phone"
-                  value={data?.phone}
+                  value={data?.phone || ""}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment
+                        position="start"
+                        className="text-[#475569]"
+                      >
+                        +234
+                      </InputAdornment>
+                    )
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -133,9 +138,18 @@ const GetStartedModal = props => {
               </Grid>
               <Grid item xs={12}>
                 <AppSelect
+                  name="location"
+                  label="Location"
+                  options={NIGERIAN_STATES}
+                  onChange={handleTextChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <AppSelect
                   name="health_facility"
                   label="Health Facility"
-                  options={currencies}
+                  options={FACILITY_TYPE}
+                  onChange={handleTextChange}
                 />
               </Grid>
             </Grid>

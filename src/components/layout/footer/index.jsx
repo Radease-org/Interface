@@ -6,7 +6,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import "./footer.scss";
 const Footer = () => {
   return (
-    <footer id="footer">
+    <footer id="footer" className="page-footer">
       <div className="content">
         <img src="/brands/whiteLogo.svg" alt="white logo" className="logo" />
         <div className="footer-section hidden lg:block">
