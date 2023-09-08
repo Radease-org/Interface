@@ -48,7 +48,6 @@ const GetStartedModal = props => {
     return errors;
   }, [data, fieldsValidations, hasSubmittedOnce]);
 
-
   //   functions
   const closeModal = () => {
     handleClose();
@@ -99,7 +98,7 @@ const GetStartedModal = props => {
       className="flex justify-center items-center"
     >
       <Zoom in={open}>
-        <Box className="bg-white w-[90%] lg:w-[771px] rounded-[8px] py-[48px] px-[24px] lg:p-[48px] relative">
+        <Box className="bg-white w-[90%] lg:w-[771px] rounded-[8px] p-6 lg:p-12 relative">
           <button
             onClick={handleClose}
             className="absolute -right-4 -top-4 w-8 h-8 bg-white flex justify-center items-center rounded-full"
@@ -110,7 +109,11 @@ const GetStartedModal = props => {
             Have a feel of what Radease is
           </h3>
           <form onSubmit={handleSubmit}>
-            <Grid container spacing={3}>
+            <Grid
+              container
+              spacing={3}
+              className="max-h-[60vh] md:max-h-[unset] overflow-auto"
+            >
               <Grid item xs={12} md={6}>
                 <AppInput
                   label="First name"
