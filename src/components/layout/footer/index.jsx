@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer id="footer" className="page-footer">
       <div className="content">
-        <img src="/brands/whiteLogo.svg" alt="white logo" className="logo" />
+        <img src="/brands/white-logo.svg" alt="white logo" className="logo" />
         <div className="footer-section hidden lg:block">
           <h4 className="header">About Radease</h4>
           <p>Get to know what we offer</p>

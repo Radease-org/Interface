@@ -41,6 +41,7 @@ const SmScreenMenu = props => {
                 to={link.link}
                 onClick={onClose}
                 className="block py-2 px-6 text-[#2F4993] text-sm font-bold border-b border-[#f1f5f9]"
+                key={link.label}
               >
                 {link.label}
               </Link>

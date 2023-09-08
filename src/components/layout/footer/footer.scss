@@ -17,7 +17,7 @@
     }
   }
   .last-section {
-    @apply flex flex-col lg:flex-row gap-4 justify-between items-start lg:items-center border-t-2 border-[#526DBB] mt-6 py-4;
+    @apply flex flex-col lg:flex-row gap-4 justify-between items-start lg:items-center border-t border-[#526DBB68] mt-6 py-4;
     a {
       @apply text-[12px] font-bold pr-2 lg:pr-8;
     }

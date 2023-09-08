@@ -3,7 +3,7 @@ import React from "react";
 import { TextField } from "@mui/material";
 
 const AppInput = props => {
-  const { name, onChange, label, value = "", ...otherProps } = props;
+  const { name, onChange, label, value = "", error, ...otherProps } = props;
   return (
     <TextField
       id={name}
@@ -13,6 +13,8 @@ const AppInput = props => {
       className="w-full"
       value={value}
       onChange={onChange}
+      error={Boolean(error)}
+      helperText={error}
       {...otherProps}
     />
   );

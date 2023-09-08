@@ -1,11 +1,17 @@
 import React from "react";
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import {
+  FormControl,
+  FormHelperText,
+  InputLabel,
+  MenuItem,
+  Select
+} from "@mui/material";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const AppSelect = props => {
-  const { label, options, name, onChange } = props;
+  const { label, options, name, onChange, error } = props;
   return (
-    <FormControl className="w-full">
+    <FormControl className="w-full" error={Boolean(error)}>
       <InputLabel>{label}</InputLabel>
       <Select
         id={name}
@@ -28,6 +34,7 @@ const AppSelect = props => {
           </MenuItem>
         ))}
       </Select>
+      <FormHelperText>{error}</FormHelperText>
     </FormControl>
   );
 };
