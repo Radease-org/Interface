@@ -24,7 +24,6 @@ const GetStartedForm = props => {
       />
       <button
         className="bg-[#f1f5f9] text-[#12516a] rounded p-4 font-bold disable:bg-[#f1f5f9] disabled:text-[#C7C6CA]  min-w-[120px] py-1"
-        disabled={!email}
       >
         <span className="block py-2">{buttonText}</span>
       </button>
