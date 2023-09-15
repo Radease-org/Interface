@@ -46,7 +46,7 @@ const GetStartedModal = props => {
       errors[key] = error;
     });
     return errors;
-  }, [data, fieldsValidations, hasSubmittedOnce]);
+  }, [data, fieldsValidations]);
 
   //   functions
   const closeModal = () => {
